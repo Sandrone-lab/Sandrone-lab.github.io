@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haixin Tang · 唐海鑫 · homepage</title>
+    <!-- 简洁风格，兼顾诗意与学术感，适配 GitHub Pages -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf9f7;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1e1e1e;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem 1.2rem;
+        }
+
+        .card {
+            max-width: 680px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.03), 0 4px 12px rgba(0, 0, 0, 0.02);
+            padding: 3rem 2.5rem;
+            transition: box-shadow 0.2s ease;
+            border: 1px solid #f0eeea;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 2rem 1.5rem;
+                border-radius: 20px;
+            }
+        }
+
+        /* 问候 */
+        .greeting {
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
+            color: #6b6b6b;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+            color: #111;
+            line-height: 1.2;
+        }
+
+        .chinese-name {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #3a3a3a;
+            margin-left: 0.25rem;
+        }
+
+        /* 职位信息 */
+        .affiliation {
+            font-size: 1.1rem;
+            color: #2c2c2c;
+            margin: 1.2rem 0 0.25rem 0;
+            line-height: 1.5;
+        }
+
+        .affiliation strong {
+            font-weight: 500;
+            color: #000;
+        }
+
+        .supervisor {
+            font-size: 1rem;
+            color: #4a4a4a;
+            margin-bottom: 1.5rem;
+        }
+
+        .supervisor a {
+            color: #1e1e1e;
+            text-decoration: none;
+            border-bottom: 1px solid #d0cdc8;
+            transition: border-color 0.2s;
+        }
+
+        .supervisor a:hover {
+            border-bottom-color: #888;
+        }
+
+        /* 邮箱 */
+        .email {
+            font-size: 1.05rem;
+            margin: 1.2rem 0 2.2rem 0;
+            padding: 0.6rem 0 0.6rem 1rem;
+            border-left: 3px solid #d4cfc7;
+            color: #2e2e2e;
+            background-color: #f9f8f6;
+            border-radius: 0 12px 12px 0;
+            font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+            word-break: break-word;
+        }
+
+        /* 分隔线 —— 带一点诗意 */
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin: 1.2rem 0 1.8rem 0;
+            color: #b9b2a8;
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e0dbd4, transparent);
+        }
+
+        /* 诗歌区块 — 雅致，保留原貌 */
+        .poem {
+            font-size: 1.08rem;
+            line-height: 2;
+            color: #2b2b2b;
+            font-style: normal;
+            letter-spacing: 0.02em;
+            margin: 1.8rem 0 0.8rem 0;
+            padding: 0.5rem 0 0.5rem 0.75rem;
+            border-left: 2px solid #dbd5cd;
+        }
+
+        .poem p {
+            margin: 0.4rem 0;
+            white-space: pre-line;
+        }
+
+        /* 保持诗歌的折行与空格，显示原样 */
+        .poem .stanza {
+            white-space: pre-line;
+            font-family: inherit;
+        }
+
+        /* 若需要强调或小注 */
+        .footnote {
+            font-size: 0.9rem;
+            color: #9b9590;
+            margin-top: 2.2rem;
+            padding-top: 0.8rem;
+            border-top: 1px dashed #e6e1da;
+            text-align: right;
+            font-style: italic;
+        }
+
+        a {
+            color: #1e1e1e;
+            text-decoration: none;
+            border-bottom: 1px dotted #b9b2a8;
+            transition: border 0.2s;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #6b6b6b;
+        }
+
+        /* 小图标/装饰 */
+        .dot {
+            color: #c7bfb5;
+            margin: 0 0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- 问候 -->
+        <div class="greeting">Hi, friends. Welcome to my homepage!</div>
+        
+        <!-- 姓名 -->
+        <h1>
+            Haixin Tang <span class="chinese-name">(唐海鑫)</span>
+        </h1>
+        
+        <!-- 学术背景 -->
+        <div class="affiliation">
+            Graduate student · Department of Logistics and Maritime Studies<br>
+            <strong>The Hong Kong Polytechnic University</strong>
+        </div>
+        
+        <!-- 导师信息 -->
+        <div class="supervisor">
+            Supervised by <a href="#" target="_blank" rel="noopener">Professor Bu Jinzhi</a>
+        </div>
+
+        <!-- 邮箱 显示为纯文本，防止抓取但保持可读 (dot → . / at → @) 已经按原文格式 -->
+        <div class="email">
+            📧 haixin (dot) tang (at) connect (dot) poly (dot) com
+        </div>
+
+        <!-- 一条极简分隔线，加一点视觉休息 -->
+        <div class="divider">✧  ✦  ✧</div>
+
+        <!-- 诗歌区块 — 保留所有换行与原貌，中文内容不做任何转义，直接展示 -->
+        <div class="poem">
+            <p>鎏金未凋，夕暮已远<br>
+            回望镜中，时岁翩然‌‌‌‌<br>
+            不叹日落，不羡月升<br>
+            世事皆数，昼来夜往‌‌‌<br>
+            ‌万象皆灰，唯理明畅<br>
+            ‌水仙梦醒，且望晨光‌‌‌‌</p>
+        </div>
+
+        <!-- 极小的页脚装饰 / 可以放一点心情，但不要喧宾夺主 -->
+        <div class="footnote">
+            — 且望晨光
+        </div>
+    </div>
+
+    <!-- 没有任何多余的js，纯HTML + CSS，符合GitHub Pages静态托管 -->
+</body>
+</html>
